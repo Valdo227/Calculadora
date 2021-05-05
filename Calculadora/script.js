@@ -25,7 +25,7 @@ function Calculadora(){
 
     }else {
         document.getElementById("res").innerHTML = "";
-        document.getElementById("res").innerHTML = res;
+        document.getElementById("res").innerHTML = res.toFixed(2);
     }
 }
 
@@ -35,8 +35,8 @@ function numbers(ec,op){
 
     if(pos === ec.lastIndexOf(op)){
 
-            num[0] = parseInt(ec.substring(0, pos));
-            num[1] = parseInt(ec.substring(pos + 1, ec.length));
+            num[0] = parseFloat(ec.substring(0, pos));
+            num[1] = parseFloat(ec.substring(pos + 1, ec.length));
             console.log(num);
     }
     else
