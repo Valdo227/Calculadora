@@ -19,10 +19,14 @@ function Calculadora(){
     else
         alert("Ingresa un operador + , - , * , /");
 
+    if(isNaN(res)){
+        alert("Ingresa una operación valida")
+        document.getElementById("res").innerHTML = "0";
 
-    document.getElementById("res").innerHTML="";
-    document.getElementById("res").innerHTML= res;
-
+    }else {
+        document.getElementById("res").innerHTML = "";
+        document.getElementById("res").innerHTML = res;
+    }
 }
 
 function numbers(ec,op){
@@ -31,12 +35,12 @@ function numbers(ec,op){
 
     if(pos === ec.lastIndexOf(op)){
 
-        num[0] = parseInt(ec.substring(0,pos));
-        num[1] = parseInt(ec.substring(pos+1,ec.length));
-        console.log(num);
+            num[0] = parseInt(ec.substring(0, pos));
+            num[1] = parseInt(ec.substring(pos + 1, ec.length));
+            console.log(num);
     }
     else
-        alert("El operador se repite")
+        alert("El operador se repite");
 
     return num;
 }
